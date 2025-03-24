@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>حالة سيرفر MTA:SA - Kiro Role Play</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #1d1d1d;
+            color: white;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            background-color: #111;
+            border-radius: 20px;
+            padding: 40px 60px;
+            box-shadow: 0 0 25px rgba(0, 0, 0, 0.7);
+            text-align: center;
+            width: 100%;
+            max-width: 650px;
+            overflow: hidden;
+        }
+
+        h1 {
+            font-size: 3rem;
+            color: #f7c600;
+            margin-bottom: 20px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .logo {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #f7c600;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            text-shadow: 0 0 20px #ff0000, 0 0 30px #ff0000;
+        }
+
+        .status {
+            font-size: 24px;
+            margin-top: 20px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .status-text {
+            font-size: 2.5rem;
+            color: #ff0000;
+            animation: blinkText 2s infinite, shakeText 1s infinite;
+            text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000, 0 0 30px #ff0000;
+        }
+
+        .status-dot {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background-color: red;
+            margin-top: 40px;
+            animation: blink 1s infinite;
+            display: inline-block;
+            margin-bottom: 40px;
+        }
+
+        /* تأثيرات الأنيميشن للنقطة */
+        @keyframes blink {
+            0% {
+                transform: scale(1);
+                background-color: #ff0000;
+            }
+            50% {
+                transform: scale(1.3);
+                background-color: #ff6666;
+            }
+            100% {
+                transform: scale(1);
+                background-color: #ff0000;
+            }
+        }
+
+        /* تأثيرات للنص "السيرفر مغلق حالياً" */
+        @keyframes blinkText {
+            0% {
+                color: #f7c600;
+                text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000, 0 0 30px #ff0000;
+            }
+            50% {
+                color: #ff0000;
+                text-shadow: 0 0 10px #f7c600, 0 0 20px #f7c600, 0 0 30px #f7c600;
+            }
+            100% {
+                color: #f7c600;
+                text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000, 0 0 30px #ff0000;
+            }
+        }
+
+        @keyframes shakeText {
+            0% {
+                transform: translateX(0);
+            }
+            25% {
+                transform: translateX(-10px);
+            }
+            50% {
+                transform: translateX(10px);
+            }
+            75% {
+                transform: translateX(-10px);
+            }
+            100% {
+                transform: translateX(0);
+            }
+        }
+
+        .fake-players {
+            margin-top: 30px;
+            font-size: 18px;
+            color: #f7c600;
+            text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000;
+        }
+
+        /* تأثيرات عند التمرير على النقطة */
+        .status-dot:hover {
+            transform: scale(1.2);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- الشعار -->
+        <div class="logo">Kiro Role Play</div>
+        <h1>حالة سيرفر MTA:SA</h1>
+        <div class="status">
+            <p class="status-text">السيرفر مغلق حالياً</p>
+            <div class="status-dot"></div> <!-- النقطة تحت النص -->
+        </div>
+        <div class="fake-players">
+            <p>عدد اللاعبين: <span>0</span></p>
+        </div>
+    </div>
+</body>
+</html>
